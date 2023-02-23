@@ -1,0 +1,32 @@
+@contentType = application/json
+@baseUrl = http://localhost:8000/users
+###
+POST {{baseUrl}}/register HTTP/1.1
+content-type: {{contentType}}
+
+{
+  "user_name":"mike",
+  "password":"123456"
+}
+###
+POST {{baseUrl}}/login HTTP/1.1
+content-type: {{contentType}}
+
+{
+  "user_name":"power",
+  "password":"123456"
+}
+
+###
+POST {{baseUrl}}/ HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6ZmFsc2UsImlhdCI6MTY3NjgyNTU4NSwiZXhwIjoxNjc2ODI5MTg1fQ.JHWd-KNtLPIjCoD-OvZfyVnQBSK4psig-al4Tj2AdGM
+
+###
+PATCH  {{baseUrl}}/updatepwd HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6ZmFsc2UsImlhdCI6MTY3NjgyNTU4NSwiZXhwIjoxNjc2ODI5MTg1fQ.JHWd-KNtLPIjCoD-OvZfyVnQBSK4psig-al4Tj2AdGM
+
+{
+  "password":"123456"
+}

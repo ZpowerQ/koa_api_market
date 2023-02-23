@@ -1,0 +1,44 @@
+@contentType = application/json
+@baseUrl = http://localhost:8000/cart
+
+POST {{baseUrl}}/add HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNjc2OTkzODYyLCJleHAiOjE2Nzc4NTc4NjJ9.UCm315E0wsmui51D4SW1zkG9_6CpsIT_tOxcb42oJQU
+
+{
+  "goods_id":1
+}
+
+###
+GET {{baseUrl}}?pageNum=1&pageSize=10 HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNjc2OTkzODYyLCJleHAiOjE2Nzc4NTc4NjJ9.UCm315E0wsmui51D4SW1zkG9_6CpsIT_tOxcb42oJQU
+
+###
+PATCH {{baseUrl}}/1 HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNjc2OTkzODYyLCJleHAiOjE2Nzc4NTc4NjJ9.UCm315E0wsmui51D4SW1zkG9_6CpsIT_tOxcb42oJQU
+
+{
+  "number":10
+}
+
+###
+DELETE {{baseUrl}}/delete HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNjc2OTkzODYyLCJleHAiOjE2Nzc4NTc4NjJ9.UCm315E0wsmui51D4SW1zkG9_6CpsIT_tOxcb42oJQU
+
+{
+  "ids":[1,2]
+}
+
+
+###
+POST {{baseUrl}}/selectAll HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNjc2OTkzODYyLCJleHAiOjE2Nzc4NTc4NjJ9.UCm315E0wsmui51D4SW1zkG9_6CpsIT_tOxcb42oJQU
+
+{
+  "selected":false
+}
+

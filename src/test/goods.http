@@ -1,0 +1,45 @@
+@contentType = application/json
+@baseUrl = http://localhost:8000/goods
+###
+POST {{baseUrl}}/uploadimg HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6ZmFsc2UsImlhdCI6MTY3Njg3OTgzMSwiZXhwIjoxNjc2ODgzNDMxfQ.u7xw3-1VEyAVYuGTE9rY8LYTv960e6_dYJM3tEUsJwE
+
+###
+POST {{baseUrl}}/uploadmsg HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNjc2OTA0OTgyLCJleHAiOjE2NzY5OTEzODJ9.fdarwKbFCExmig__C4pkCJXdPcM55gRunktj95StLA4
+
+{
+  "goods_name":"apple",
+  "goods_price":20,
+  "goods_num":5,
+  "goods_img":"aaa.png"
+}
+
+###
+PUT {{baseUrl}}/update/1 HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNjc2OTA0OTgyLCJleHAiOjE2NzY5OTEzODJ9.fdarwKbFCExmig__C4pkCJXdPcM55gRunktj95StLA4
+
+{
+  "goods_name":"phone",
+  "goods_price":200,
+  "goods_num":5,
+  "goods_img":"aaa.png"
+}
+
+###
+POST {{baseUrl}}/1/off HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNjc2OTA0OTgyLCJleHAiOjE2NzY5OTEzODJ9.fdarwKbFCExmig__C4pkCJXdPcM55gRunktj95StLA4
+
+###
+POST {{baseUrl}}/1/on HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNjc2OTkzODYyLCJleHAiOjE2Nzc4NTc4NjJ9.UCm315E0wsmui51D4SW1zkG9_6CpsIT_tOxcb42oJQU
+
+###
+GET {{baseUrl}}?pageNum=1&pageSize=10 HTTP/1.1
+content-type: {{contentType}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcl9uYW1lIjoicG93ZXIiLCJpc19hZG1pbiI6dHJ1ZSwiaWF0IjoxNjc2OTA0OTgyLCJleHAiOjE2NzY5OTEzODJ9.fdarwKbFCExmig__C4pkCJXdPcM55gRunktj95StLA4
